@@ -20,7 +20,7 @@ http.createServer(function(req, res) {
     form.parse(req, function(err, fields, files) {
       fs.rename(files.upload.path, './data/data.xlsx');
       res.writeHead(200, {'content-type': 'text/html'});
-      res.write('Received upload: <a href="/view">View PDF</a>');
+      res.write('Received upload: <a href="/view">View</a>');
       res.end();
     });
 
